@@ -1,0 +1,102 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        Einstellungen
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+					<fullWidth>
+						<TCEforms type="array">
+							<label>Volle Fensterbreite</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</fullWidth>
+                    <columnType>
+                        <TCEforms>
+                            <label>Spaltenvarianten</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0">50:50</numIndex>
+                                        <numIndex index="1">cols50-50</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">40:60</numIndex>
+                                        <numIndex index="1">cols40-60</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">60:40</numIndex>
+                                        <numIndex index="1">cols60-40</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">25:75</numIndex>
+                                        <numIndex index="1">cols25-75</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">75:25</numIndex>
+                                        <numIndex index="1">cols75-25</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </columnType>
+                    <color>
+                        <TCEforms>
+                            <label>Hintergrundfarbe der Section</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="1">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">Grau</numIndex>
+                                        <numIndex index="1">grey</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">Grau medium</numIndex>
+                                        <numIndex index="1">grey-medium</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">Grau dunkel</numIndex>
+                                        <numIndex index="1">grey-dark</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">Braun dunkel</numIndex>
+                                        <numIndex index="1">brown-dark</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">Braun hell</numIndex>
+                                        <numIndex index="1">brown-light</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">creme</numIndex>
+                                        <numIndex index="1">creme</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">orange</numIndex>
+                                        <numIndex index="1">orange</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">rot</numIndex>
+                                        <numIndex index="1">red</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </color>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

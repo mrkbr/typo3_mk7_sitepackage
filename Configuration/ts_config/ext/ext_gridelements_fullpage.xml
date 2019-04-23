@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <ROOT type="array">
+	    <TCEforms>
+            <sheetTitle>
+                Einstellungen
+            </sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el type="array">
+            <anker_id>
+                <TCEforms>
+                    <label>Anker-ID</label>
+                    <config>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </anker_id>
+            <anker_title>
+                <TCEforms>
+                    <label>Anker-Title</label>
+                    <config>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </anker_title>
+            <shadow>
+                <TCEforms type="array">
+                    <label>Checkbox</label>
+                    <config>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </shadow>
+            <background_image>
+			    <TCEforms>
+				    <label>Hintergrundbild</label>
+			        <config>
+			            <type>inline</type>
+			            <appearance type="array">
+			                <createNewRelationLinkTitle>LLL:EXT:myext/Resources/Private/Language/locallang_db.xlf:createNewRelationLinkTitle</createNewRelationLinkTitle>
+			                <headerThumbnail type="array">
+			                    <field>uid_local</field>
+			                    <height>45c</height>
+			                    <width>45</width>
+			                </headerThumbnail>
+			            </appearance>
+			            <foreign_field>uid_foreign</foreign_field>
+			            <foreign_label>uid_local</foreign_label>
+						<foreign_match_fields type="array">
+							<fieldname>background_image</fieldname>
+						</foreign_match_fields>
+			            <foreign_selector>uid_local</foreign_selector>
+			            <foreign_selector_fieldTcaOverride type="array">
+			                <config type="array">
+			                    <appearance type="array">
+			                        <elementBrowserAllowed>gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai</elementBrowserAllowed>
+			                        <elementBrowserType>file</elementBrowserType>
+			                    </appearance>
+			                </config>
+			            </foreign_selector_fieldTcaOverride>
+			            <foreign_sortby>sorting_foreign</foreign_sortby>
+			            <foreign_table>sys_file_reference</foreign_table>
+			            <foreign_table_field>tablenames</foreign_table_field>
+			            <maxitems>1</maxitems>
+			            <minitems>0</minitems>
+			        </config>
+			    </TCEforms>
+			</background_image>
+			<bgcolor>
+                <TCEforms>
+                    <label>Hintergrundfarbe</label>
+                    <config>
+                        <type>select</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">keins</numIndex>
+                                <numIndex index="1"></numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">gelb</numIndex>
+                                <numIndex index="1">yellow-bg</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">grau</numIndex>
+                                <numIndex index="1">grey-bg</numIndex>
+                            </numIndex>
+                        </items>
+                        <maxitems>1</maxitems>
+                        <size>1</size>
+                    </config>
+                </TCEforms>
+            </bgcolor>
+        </el>
+    </ROOT>
+</T3DataStructure>

@@ -1,0 +1,49 @@
+
+
+	<header>
+			
+			
+			<f:render section="header" />
+
+			<f:render section="navigation" />
+					
+					
+			{sprachwahlHeader -> f:format.raw()}
+					
+					
+					
+			
+	</header>
+
+
+	{contentPic -> f:format.raw()}
+
+	<main>
+			{contentLeft -> f:format.raw()}
+			
+			{contentMain -> f:format.raw()}
+			
+			{contentRight -> f:format.raw()}
+			
+			{contentBorder-> f:format.raw()}
+			
+			{contentSub -> f:format.raw()}
+			
+			
+			
+		
+	</main><!-- Wrapper End -->
+
+
+	
+	<!-- Footer Begin -->
+	<footer>
+		<div class="inner">
+				{contentFooter -> f:format.raw()}
+		</div>
+	</div><!-- Footer End -->
+
+
+
+	{googleAnalytics -> f:format.raw()}
+

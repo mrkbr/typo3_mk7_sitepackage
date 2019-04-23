@@ -1,0 +1,59 @@
+
+
+
+
+/*
+	Hamburger
+*/
+
+$hamburgerDicke: 2px;
+$hamburgerFarbe: #000;
+$hamburgerFarbeOffen: #fff;
+$hamburgerAnimSpeed: .25s;
+
+
+
+// styling & generation
+.hamburger { cursor: pointer; position:fixed; z-index: 10000; top:20px; right:38px;padding:10px;overflow:hidden;margin:0 0 0 0px;padding:0;width:50px;height:50px;font-size:0;text-indent:-9999px; @include animateAll($hamburgerAnimSpeed); 
+	@include phone { top:-5px; right: 0; }
+	
+	//strich 1 und 3
+	&::before, &::after {content:''; position: absolute; background-color: $hamburgerFarbe; left: 20%; right:20%; top:50%; margin-top:10px; height: $hamburgerDicke; display: block; opacity: 1; @include animateAll($hamburgerAnimSpeed); }
+
+	&:before {margin-top:-11px; }
+	&:after { margin-top:9px; }
+	
+	// strich 2 und x
+	span { background: transparent; width: 1px; overflow: hidden; display: block;
+		&::before, &::after {content:''; position: absolute; background-color: $hamburgerFarbe; width: 60%; left: 20%; top:50%; margin-top:-$hamburgerDicke/2; height: $hamburgerDicke; display: block; @include animateAll($hamburgerAnimSpeed); }
+	}
+	
+}
+
+// animation bei navOpen
+body.showMenu {
+	.hamburger {
+		&::before, &::after { opacity: 0; left:50%; right:50%; }
+		span {
+			&::before { transform: rotate(45deg); }
+			&::after { transform: rotate(-45deg);   }
+		}
+	}
+}
+
+body.headerShrinked {
+	//.hamburger { top:3px;}
+}
+
+// farbe bei nav open oder hover
+body.showMenu, header:hover {
+	.hamburger {
+		&::before, &::after, span:before, span:after { background-color: $hamburgerFarbeOffen; }
+	}
+}
+
+
+
+
+
+

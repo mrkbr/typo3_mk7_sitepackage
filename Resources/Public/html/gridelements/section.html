@@ -1,0 +1,17 @@
+<f:if condition="{boxedcontent}">
+	<f:then>
+		<section class="row full"> 
+			<div class="col col100">
+				<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+			</div>
+	 
+		</section>
+	</f:then>
+	<f:else>
+	<section class="row boxed"> 
+	  <div class="col col100">
+	    <f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+	  </div><!-- col-lg-8 -->
+	</section>
+	</f:else> 
+</f:if>

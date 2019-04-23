@@ -1,0 +1,22 @@
+/**
+ * Created from sitepackagebuilder.com
+ */
+.cke_editable { padding: 4px; }
+
+blockquote{color:#ff3939;background:#ddd;margin:0;padding:3px 14px;}
+
+.cke_editable > p { border: 1px dashed #ddd; position: relative; padding: 3px 1px; }
+.cke_editable > p:before {content:'P';position:absolute;top:1px;left:-9px;color:#ddd;font-size:11px;background:#fff;}
+
+.cke_editable h1, .cke_editable h2, .cke_editable h3 { position: relative; border: 1px dashed #ddd;}
+.cke_editable h1 { padding-top: 25px; padding-bottom: 25px; }
+.cke_editable h2 { padding-top: 20px; padding-bottom: 20px; }
+.cke_editable h3 { padding-top: 15px; padding-bottom: 15px; }
+.cke_editable h4 { padding-top: 10px; padding-bottom: 10px; }
+
+.cke_editable h1:before, .cke_editable h2:before, .cke_editable h3:before, .cke_editable h4:before {content:'H1';position:absolute;top:1px;left:-9px;color:#ddd;font-size:11px;background:#fff;} 
+.cke_editable h2:before { content: 'H2'  }
+.cke_editable h3:before { content: 'H3'  }
+.cke_editable h3:before { content: 'H4'  }
+
+ul { padding-left: 20px; }

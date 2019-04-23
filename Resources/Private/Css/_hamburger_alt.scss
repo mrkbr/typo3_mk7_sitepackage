@@ -1,0 +1,68 @@
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	Hamburger - Mobile Menu
+└────────────────────────────────────┘ */
+
+/*
+┌────────────────────────────────────┐
+	Hamburger to x icon
+*/
+
+.hamburger {
+	span, span:before, span:after { background-color: $colCorp; }
+}
+
+body.navOpen {
+	.hamburger {  background-color:$colCorp;
+		span, span:before, span:after { background-color: #eee; }
+	}
+}
+
+
+.hamburger {display:none; position:fixed;top:0;left:0;padding:10px;overflow:hidden;margin:0 0 0 0px;padding:0;width:50px;height:50px;font-size:0;text-indent:-9999px;-webkit-appearance:none;-moz-appearance:none;appearance:none;box-shadow:none;border-radius:none;border:none;cursor:pointer;-webkit-transition:background 0.65s;transition:background 0.65s;
+	&:focus{outline:none;}
+	span{display:block;position:absolute;top:22px;left:10px;right:10px;height:3px;
+		&::before, &::after{position:absolute;display:block;left:0;width:100%;height:3px; content:"";}
+		&::before{top:-9px;}
+		&::after{top:9px;}
+	}
+	
+	
+}
+
+
+
+
+.hamburger { background:transparent; z-index: 9999; 
+	span{-webkit-transition:background 0 0.65s;transition:background 0 0.65s;
+		&::before, &::after{-webkit-transition-duration:0.65s,0.65s;transition-duration:0.65s,0.65s;-webkit-transition-delay:0.65s,0;transition-delay:0.65s,0;}
+		&::before{-webkit-transition-property:top,-webkit-transform;transition-property:top,transform;}
+		&::after{-webkit-transition-property:bottom,-webkit-transform;transition-property:bottom,transform;}
+	}
+
+}
+
+
+
+// active state, i.e. menu open
+
+.hamburger.active{background-color:#cb0032;}
+
+header .hamburger { @include phone {display:block;} }
+
+
+body.navOpen {
+	.hamburger {
+		span{background:none;
+			&::before { top:0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}
+			&::after { top:0;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}
+			//&::before, &::after { -webkit-transition-delay:0,0.65s;transition-delay:0,0.65s;  }
+		}
+	}
+}
+
+

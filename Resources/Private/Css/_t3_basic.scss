@@ -1,0 +1,19 @@
+.frame-type-form_formframework {
+	
+	form { padding: $pad; background-color: #ddd; }
+	.form-group{margin-bottom:10px;}
+	input { border: 0; padding: 2px 5px; }
+	.control-label { display: none; 	}
+	
+	.next {
+		.btn {border:0;background:#adadad;font-weight:700;}
+	}
+	
+}
+
+
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify  { text-align: justify; }

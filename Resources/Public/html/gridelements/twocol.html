@@ -1,0 +1,31 @@
+<f:if condition="{data.flexform_fullWidth}">
+	<f:then>
+		<section id="c{data.uid}" class="row gridTwocol fullwidth layout-{data.layout} {data.flexform_color} {data.flexform_columnType}">
+	</f:then>		
+	<f:else>
+		<section id="c{data.uid}" class="row gridTwocol box layout-{data.layout} {data.flexform_color} {data.flexform_columnType}">
+	</f:else> 
+</f:if>
+
+			
+	<div class="col colLeft">
+		{data.tx_gridelements_view_columns.1000->f:format.raw()}
+	</div>
+	<div class="col colRight">
+		{data.tx_gridelements_view_columns.1001->f:format.raw()}
+	</div>
+</section>	
+
+
+
+
+
+
+
+
+
+	
+<f:comment>
+		<f:debug>{_all}</f:debug>	
+	
+</f:comment>

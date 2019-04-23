@@ -1,0 +1,28 @@
+<div class="ceOut gridBoxed fluid" id="{field.pid}"  data-bg="{data.flexform_background_image.url}"><div class="ceIn">
+	
+	
+	<h{data.header_layout}>debug: {data.header}</h{data.header_layout}>
+
+		
+	<p>debug image: {data.flexform_background_image}</p>
+
+	<p>debug anker title: {data.flexform_anker_title}</p>
+	
+	<p>debug anker id: {data.flexform_anker_id}</p>
+	
+	<p>debug shadow checkbox: {data.flexform_shadow}</p>
+	
+	<div class="<f:if condition="{data.flexform_shadow}==1">shadow</f:if><f:if condition="{data.flexform_bgcolor}!=''"> {data.flexform_bgcolor}</f:if>">
+	  <div class="row">
+	    <div class="col-md-6 col-xs-12">
+	      {data.tx_gridelements_view_columns.1000->f:format.raw()}
+	    </div>
+	    <div class="col-md-6 col-xs-12">
+	      {data.tx_gridelements_view_columns.1000->f:format.raw()}
+	    </div>
+	  </div>
+	</div>
+
+	<f:comment><f:debug>{_all}</f:debug></f:comment>
+
+</div></div>

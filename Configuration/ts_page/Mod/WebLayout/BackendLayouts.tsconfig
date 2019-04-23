@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:mk7base/Configuration/ts_page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">

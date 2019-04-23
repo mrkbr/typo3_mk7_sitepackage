@@ -1,0 +1,80 @@
+/*
+┌────────────────────────────────────┐
+	Layout //// Boxes
+└────────────────────────────────────┘ */
+
+
+.col, .article { display: inline-block; position: relative; text-align: left; font-size: $bodyFontSize;  vertical-align: top;   
+	.innerWide { }
+}
+
+
+.row { font-size: 0; }
+.box { max-width: $maxWidth; margin: 0 auto; }
+
+
+.col[class*="type-"] { padding: 10vh 0; }
+
+.ceIn, .pad { padding:0 20px 0px; overflow: hidden; }
+
+//div[class*='type-dce_'] .ceIn { padding: 0; }
+
+
+
+
+
+
+
+.col16 { width:16.66%; }
+.col20 { width:20%; }
+.col25 { width:25%; }
+.col30 { width:30%; }
+.col33 { width:33.33%; }
+.col40 { width:40%; }
+.col50 { width:50%; }
+.col60 { width:60%; }
+.col66 { width:66.66%; }
+.col70 { width:70%; }
+.col75 { width:75%; }
+.col80 { width:80%; }
+.col84 { width:83.33%; }
+.col100 { width:100%; }
+
+.ind5 { margin-left:5%; }
+.ind10 { margin-left:10%; }
+.ind16 { margin-left:16.66%; }
+.ind20 { margin-left:20%; }
+.ind25 { margin-left:25%; }
+.ind30 { margin-left:30%; }
+.ind33 { margin-left:33.33%; }
+.ind40 { margin-left:40%; }
+.ind50 { margin-left:50%; }
+.ind60 { margin-left:60%; }
+.ind66 { margin-left:66.66%; }
+.ind70 { margin-left:70%; }
+.ind75 { margin-left:75%; }
+.ind80 { margin-left:80%; }
+.ind90 { margin-left:90%; }
+
+
+
+@include tablet { 
+	.col16, .col20, .col25, .col33 { width: 50% !important; } 
+}
+
+@include phone{ 
+	.col { width: 100% !important; } 
+}
+
+
+
+
+
+
+// Full Width Break Out - Ganze Breite für Elemente
+@supports (width: 100vw) {
+  .col100vw, .breakout {width:100vw; display: block; position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;}
+}
+
+
+

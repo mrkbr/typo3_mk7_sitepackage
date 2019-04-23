@@ -1,0 +1,99 @@
+@mixin animateAll($speed) {-webkit-transition:all $speed;-moz-transition:all $speed;-ms-transition:all $speed;-o-transition:all $speed;transition:all $speed;}
+@mixin animateOpacity($speed) {-webkit-transition:opacity $speed;-moz-transition:opacity $speed;-ms-transition:opacity $speed;-o-transition:opacity $speed;transition:opacity $speed;}
+@mixin animateHeight($speed) {-webkit-transition:height $speed;-moz-transition:height $speed;-ms-transition:height $speed;-o-transition:height $speed;transition:height $speed;}
+@mixin animateWidth($speed) {-webkit-transition:width $speed;-moz-transition:width $speed;-ms-transition:width $speed;-o-transition:width $speed;transition:width $speed;}
+@mixin animateWidthLinear($speed) {-webkit-transition:width $speed;-moz-transition:width $speed;-ms-transition:width $speed;-o-transition:width $speed;transition:width $speed;}
+@mixin animatePosition($speed) {-webkit-transition:top, right, bottom, left $speed;-moz-transition:top, right, bottom, left $speed;-ms-transition:top, right, bottom, left $speed;-o-transition:top, right, bottom, left $speed;transition:top, right, bottom, left $speed;}
+@mixin animateLeft($speed) {-webkit-transition:left $speed;-moz-transition:left $speed;-ms-transition: left $speed;-o-transition: left $speed;transition: left $speed;}
+@mixin animateRight($speed) {-webkit-transition:right $speed;-moz-transition:right $speed;-ms-transition: right $speed;-o-transition: right $speed;transition: right $speed;}
+
+
+@mixin easingOn { -webkit-transition-timing-function: ease-in-out !important; transition-timing-function: ease-in-out !important; -webkit-animation-timing-function: ease-in-out;   animation-timing-function: ease-in-out;}
+@mixin easingOff { -webkit-transition-timing-function: linear !important; transition-timing-function: linear !important; -webkit-animation-timing-function: linear;   animation-timing-function: linear;}
+
+
+
+// generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+            transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+	@include transform(rotate($deg));
+}
+
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x,$y) {
+   @include transform(translate($x,$y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+//transform origin
+@mixin transform-origin ($origin){moz-transform-origin:$origin;-o-transform-origin:$origin;-ms-transform-origin:$origin;-webkit-transform-origin:$origin;transform-origin:$origin;}
+
+
+@mixin centeringFixed{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+@mixin leftCenterFixed{position:fixed;top:50%;left:0;transform:translate(0%,-50%);}
+@mixin rightCenterFixed{position:fixed;top:50%;right:0;transform:translate(0%,-50%);}
+@mixin centeringAbsolute{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+
+
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (min-width: #{$phone-width + 1}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+
+@mixin tabletMinus {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tabletPlus {
+  @media (min-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin laptopMinus {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

@@ -1,0 +1,107 @@
+nurinhalt = PAGE
+nurinhalt {
+
+	typeNum = 101
+	
+	10 < page.10
+	10.template.file = {$path.html}ajax.html
+	10 {
+		subparts {
+				
+			CONTENT_MAIN < styles.content.get
+			CONTENT_MAIN.stdWrap.wrap = <div id="ajaxContentMain">|</div>
+			
+			CONTENT_RIGHT < styles.content.getRight
+			CONTENT_RIGHT.stdWrap.wrap = <div id="ajaxContentRight">|</div> 
+			
+			
+			WRAP_TOP < temp.bodyTagCOA2
+		}
+	}
+}
+
+
+
+[globalVar = GP:type = 101]
+tt_content.stdWrap.innerWrap.cObject.default.20.10.value = csc-default csc-layout-{field:layout} csc-frame-{field:section_frame} csc-type-{field:CType}
+tt_content.stdWrap.innerWrap.cObject.default.20.10.insertData = 1
+#tt_content.stdWrap.innerWrap.cObject.default.30.cObject.default.value = >|</div>
+tt_content.stdWrap.innerWrap.cObject.default.30.cObject.default.value = ><div class="csc-inner2">|</div></div>
+
+
+
+temp.textpicOriginal = COA
+temp.textpicOriginal {
+  10 = COA
+  10.if.value = 25
+  10.if.isLessThan.field = imageorient
+  10.10 = < lib.stdheader
+ 
+  20  = < tt_content.image.20
+ 
+  20.text.10 = COA
+  20.text.10 {
+    if.value = 24
+    if.isGreaterThan.field = imageorient
+    10 = < lib.stdheader
+    10.stdWrap.dataWrap = <div class="csc-textpicHeader csc-textpicHeader-{field:imageorient}">|</div>
+    }
+  20.text.20 = < tt_content.text.20
+}
+ 
+temp.textpicCustom = COA
+temp.textpicCustom {
+  10 = COA
+  10.if.value = 25
+  10.if.isLessThan.field = imageorient
+  10.10 >
+ 
+  20  = < tt_content.image.20
+ 
+  20.text.10 = COA
+  20.text.10 {
+    if.value = 24
+    if.isGreaterThan.field = imageorient
+    10 = < lib.stdheader
+    10.stdWrap.dataWrap = <div class="csc-textpicHeader csc-textpicHeader-{field:imageorient}">|</div>
+    }
+  20.text.15 = < lib.stdheader
+  20.text.20 = < tt_content.text.20
+}
+ 
+tt_content.textpic >
+tt_content.textpic = CASE
+tt_content.textpic {
+	key.field = header_layout
+	default < temp.textpicCustom
+	#0 < temp.textpicCustom
+	#1 < temp.textpicCustom
+	#2 < temp.textpicOriginal
+	#3 < temp.textpicOriginal
+	#4 < temp.textpicOriginal
+	#5 < temp.textpicOriginal
+	#6 < temp.textpicCustom
+	#7 < temp.textpicCustom
+	#8 < temp.textpicCustom
+}
+
+
+[global]
+
+
+
+nurinhalt.config {
+   #entfernt diverse header angaben
+   disableAllHeaderCode = 1 
+
+   #standard doctype deaktivieren
+   disableCharsetHeader = 1
+
+   #entfern die HTML Kommentare
+   disablePrefixComment = 1
+}
+
+
+
+
+

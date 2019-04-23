@@ -1,0 +1,88 @@
+//dev
+
+/*
+┌────────────────────────────────────┐
+	Header
+└────────────────────────────────────┘ */
+body > header {@include animateAll(.3s); @include easingOn; margin: 0 0px; padding: 20px 70px; overflow: hidden; text-align: left; position: fixed; width:100%; z-index: 900; background: #fff; top:0; left:0; right:0;
+	.logo {@include animateHeight(.3s); @include easingOn; height: 50px; @include phone { height: 50px; padding: 10px 20px; } display: inline-block; margin: 35px; margin: 0;
+		a { /* background: transparent url($imgPath+logo.png) no-repeat scroll 0 0; background-size: contain; */ display: block; height: 230px; height: 100%; margin:0; text-decoration: none; }
+		svg {  width: auto; height: 100%;}
+	}
+
+
+	#logoSvg { -webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out; transition: all 1s ease-in-out;}
+	a:hover { border:0;
+		#line2 { fill:red; }
+	}
+	.langMenu { display: none; float: right; padding: 10px; }
+
+	@include phone { height: 50px; padding: 0px 50px; text-align: center;
+		.logo {  }
+	}
+
+}
+
+
+
+@include tabletPlus{
+	body.headerShrinked > header {
+		.logo { height: 25px;
+			a {  }
+		}
+	}
+}
+
+
+
+body.showMenu > header { height: 100%; background-color: #ddd; }
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	Navigation
+└────────────────────────────────────┘ */
+
+.jumpFullPage { position: fixed; top:100px; right: 0; width: 15px; overflow: hidden; @include animateAll(.5s);
+	li { display: block; width: 200px; background: yellow; }
+	li.active { background:red; }
+	a { display: block; padding: 2px 15px;}
+	
+	&:hover { width: 200px; }
+}
+
+
+
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	Navigation
+└────────────────────────────────────┘ */
+header nav {float: right; text-align: center; -webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; display: inline-block; vertical-align: top;
+	ul { text-align: center; margin: 0; }
+	li { padding: 3px 8px;   margin-right:-4px;text-transform: uppercase; display: inline-block;
+		a { text-decoration: none; font-style: normal; color: #000; padding: 0 7px; font-size: 16px; letter-spacing: 1px; font-weight: 300;
+			&:hover { color: #555 }
+		}
+	}
+	li.act a, li.cur a { color: $colAct; font-weight: 400; }
+	.navOne { padding: 0px 0 0;  }
+	
+	@include phone{display:block;padding:0px;margin:0; float: none;
+		ul { padding: 0; }
+		li { padding: 10px; display: block; margin: 10px 0; background:#000;
+			a {  color: #fff; }
+		}
+	}
+
+}
+
+
+

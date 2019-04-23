@@ -1,0 +1,30 @@
+
+
+/*
+┌────────────────────────────────────┐
+	TYPO3 Responsive Images
+└────────────────────────────────────┘
+*/
+.ce-gallery {
+	
+	.ce-row { padding: 0; font-size: 0;	}
+
+	.ce-column { margin: $pad 0; display: inline-block; vertical-align: middle; }
+	.ce-column:first-child { padding-top:0; }
+
+	&[data-ce-columns="6"] .ce-column { width: 16.6%; }
+	&[data-ce-columns="5"] .ce-column { width: 20%; }
+	&[data-ce-columns="4"] .ce-column { width: 25%; }
+	&[data-ce-columns="3"] .ce-column { width: 33.3%; }
+	&[data-ce-columns="2"] .ce-column { width: 50%; }
+	&[data-ce-columns="1"] .ce-column { width: 100%; }
+
+	figure { margin: 0; padding: 0 $pad; font-size: $bodyFontSize; }
+
+	.ce-column:last-child, td.csc-textpic-imagecolumn.csc-textpic-lastcol .csc-textpic-image { margin-right: 0; padding-right: 0;}
+}
+
+
+
+
+ 

@@ -1,0 +1,149 @@
+/* 
+	===========================================================
+		Main Variables
+	===========================================================
+*/
+
+
+project {
+	title 		= MK7 (Mario Kober)
+	shortName 	= mk7
+}
+
+
+
+seo {
+	description	=
+	keywords	=
+	author		=
+	robots 		= index,follow
+	revisit 	= 7 days
+	copyright	= Mario Kober (Webdevelopment)
+}
+
+
+content.defaultHeaderType = 2
+
+
+
+
+switch {
+	coolUri			= 0
+	realUrl			= 0
+	search 			= 1
+	admPanel		= 0
+	devMode			= 1
+	frontEndEditing = 0
+	jumpNav			= 0
+	
+	pageTitleFirst	= 1
+	
+	newErrorMessage	= 0
+}
+
+
+cache {
+	autoClear	= 1
+	nightClear	= 0
+	noCache		= 1
+}
+
+
+images {
+	width = 1000
+	inText = 500
+}
+
+
+news {
+	folder				= 8
+	list				= 4
+	single				= 6
+	archive				= 7
+	teaserCharacters 	= 200
+}
+
+
+
+path {
+	template	= EXT:mk7base/Resources/Public/
+	html		= EXT:mk7base/Resources/Public/html/
+	css	 		= EXT:mk7base/Resources/Public/css/
+	img	 		= EXT:mk7base/Resources/Public/img/
+	js			= EXT:mk7base/Resources/Public/js/
+}
+
+
+
+
+
+
+
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+
+
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+
+styles {
+    templates {
+        #layoutRootPath = EXT:mk7base/Resources/Private/Layouts/ContentElements/
+        #partialRootPath = EXT:mk7base/Resources/Private/Partials/ContentElements/
+        #templateRootPath = EXT:mk7base/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+
+styles.templates {
+	templateRootPath = EXT:mk7base/Resources/Public/html/fluid_styled_content/Templates/
+	partialRootPath = EXT:mk7base/Resources/Public/html/fluid_styled_content/Partials/
+	layoutRootPath = EXT:mk7base/Resources/Public/html/fluid_styled_content/Layouts/
+}
+
+
+
+
+
+
+
+############
+### PAGE ###
+############
+page-weg {
+     fluidtemplate {
+        layoutRootPath = EXT:mk7base/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:mk7base/Resources/Private/Partials/Page/
+        templateRootPath = EXT:mk7base/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# template object erstellen
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+
+		file = {$path.html}main_fluid/templates/template.html
+		partialRootPath = {$path.html}main_fluid/partials
+		layoutRootPath = {$path.html}main_fluid/layouts
+
+
+		variables {
+
+			### 4 = PIC
+			contentPic < styles.content.get
+			contentPic {
+				slide = -1
+				select.where = colPos=4
+				stdWrap.required = 1
+				stdWrap.wrap = <section class="contentPic">|</section>
+			}
+
+			### 1 = left
+			contentLeft < styles.content.get
+			contentLeft {
+				select.where = colPos=1
+				slide = -1
+				stdWrap.required = 1
+				stdWrap.wrap = <section class="contentLeft">|</section>
+			}
+			### 0 = main
+			contentMain < styles.content.get
+			contentMain {
+				stdWrap.required = 1
+				stdWrap.wrap = <section class="contentMain">|</section>
+			}
+			
+			### 2 = main
+			contentRight < styles.content.get
+			contentRight {
+				select.where = colPos=2
+				stdWrap.required = 1
+				stdWrap.wrap = <aside class="contentRight">|</aside>
+			}
+
+			### 3 = border
+			contentBorder < styles.content.get
+			contentBorder {
+				select.where = colPos=3
+				stdWrap.required = 1
+				stdWrap.wrap = <section class="contentBorder">|</section>
+			}
+
+			### 5 = SUB
+			contentSub < styles.content.get
+			contentSub {
+				slide = -1
+				select.where = colPos=5
+				stdWrap.required = 1
+				stdWrap.wrap = <section class="contentSub">|</section>
+			}
+
+			sprachwahlHeader < temp.langMenuDropdown
+			sprachwahlHeader.stdWrap.wrap = <div class="langMenu">|</div>
+			
+			sprachwahlFooter < temp.langMenuFooter
+
+			navOne < temp.navOne
+			navTwo < temp.navTwo
+			#NAV_ONE < temp.nav_one_two_three
+
+			contentFooter < temp.footer_content
+
+			googleAnalytics < temp.google_analytics
+
+		} #subparts ende
+
+	} #10 ende
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# MAIN PAGE OBJECT END
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+

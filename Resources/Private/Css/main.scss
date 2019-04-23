@@ -1,0 +1,287 @@
+//222
+
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+@import 'fonts';
+
+@import 'hamburger';
+
+@import 'grid';
+
+@import 'header';
+@import 'footer';
+
+@import 'ext';
+@import 'ext_fullpage';
+@import 'ext_swiper';
+@import 'ext_flickity';
+@import 'ext_fluid_styles_content';
+@import 'ext_news';
+@import 'ext_cookies';
+
+
+@import 'dce_slider';
+
+
+
+
+
+
+
+
+
+
+
+.news-list-view {
+	.article { padding: $pad*2; display: block; overflow: hidden; 
+		.header { margin-bottom: 20px; }
+		.news-img-wrap { float: left; margin:0 20px 0 0;}
+		&:after { content: ''; position: absolute; top:$pad; left:$pad; right:$pad; bottom:$pad; background:#ddd; z-index: -1; }
+	}
+}
+
+
+
+
+/* Transitions */
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translate3d(0, 100%, 0);}
+  100% {opacity: 1; transform: none;}
+}
+
+@keyframes slideInRight {
+  0% {opacity: 0; transform: translate3d(-100%, 0, 0);}
+  100% {opacity: 1; transform: none;}
+}
+
+
+/*
+┌────────────────────────────────────┐
+	Basics
+└────────────────────────────────────┘ */
+
+
+html { font-size: 10px; }
+html, body { margin: 0; padding: 0;     }
+body {font-family: 'Titillium Web', sans-serif; font-size: $bodyFontSize; line-height: 1.6; padding: 170px 0px 170px; margin: 0 !important; text-align: center; color: #000;  height: auto !important; 
+	@include phone { padding-bottom: 0; }
+}
+
+p { font-size: $bodyFontSize;  }
+p+p { margin: 20px 0px 0px 0 }
+
+
+h1,h2,h3,h4 {font-family: 'Titillium Web', sans-serif; font-weight: bold; line-height: 1.2; }
+
+h1 { font-size: $h1size; padding: 0 0 10px; }
+h2 { font-size: $h2size; }
+h3 { font-size: $h3size; }
+h4 { font-size: $h4size; }
+
+
+a { color: $colAct; }
+
+
+
+/*
+┌────────────────────────────────────┐
+	Main grid, wraps, containers
+└────────────────────────────────────┘ */
+.container { /* max-width: $maxWidth; */ height:100%; margin: 0 auto; padding: 0px 70px 0; overflow: hidden; text-align: left; position: relative;  }
+
+
+main { position: relative; display: block; z-index: 1; background: #fff; font-size: 0; }
+
+.box { max-width: $maxWidth; margin: 0 auto; width: 100%; font-size: 0; }
+
+.content { text-align: center}
+.content > div { margin-right: -4px; text-align: left; display: inline-block; vertical-align: top; width:33%; }
+
+
+.container { text-align: left; }
+
+
+/*
+┌────────────────────────────────────┐
+	rte styles / ckeditor
+└────────────────────────────────────┘ */
+blockquote {background:#ddd;padding:$pad $pad*3; 
+	p{ quotes: "» " " «"; font-size:$h4size; font-style: italic; color: $colAct;
+		&:before{content:open-quote;}
+		&:after{content:close-quote;}
+	}
+}
+
+.rteIntroText { background: transparent; text-align: center; padding:$pad $pad*3; font-size:$h4size; }
+
+
+
+
+
+
+
+
+
+
+
+.csc-textpic-imagewrap[data-csc-images="1"] figure { margin-bottom: 0 !important; }
+
+
+
+
+
+
+
+
+
+
+$colForm: #888;
+$formPad: 0px;
+$formFontSize: 1.6rem;
+
+form {
+	
+	::placeholder { color: $colForm;opacity: 1; padding-left: $formPad; }
+	:-ms-input-placeholder { color: $colForm;padding-left: $formPad;}
+	::-ms-input-placeholder { color: $colForm;padding-left: $formPad;}
+	
+	.form-group{margin-bottom:10px;}
+	
+	.control-label { display: none; }
+	input { display: block; font-size: $formFontSize; border: 1px solid $colForm; background:transparent; color:$colForm;     border-width: 0 0px 1px 0px; }
+	
+	.submit button{background:transparent; font-size:$formFontSize; margin-top:10px;color:$colForm;text-align:left;padding:0 25px 0 $formPad;}
+}
+
+
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	gridelements
+└────────────────────────────────────┘ */
+.gridTwocol {
+	
+	&.cols50-50 {
+		> .col { @extend .col50 }
+	}
+
+	
+	&.cols40-60 { 
+		> .colLeft { @extend .col40 }
+		> .colRight { @extend .col60 }
+	}
+
+
+	&.cols60-40 { 
+		> .colLeft { @extend .col60 }
+		> .colRight { @extend .col40 }
+	}
+	
+	
+	&.cols25-75 { 
+		> .colLeft { @extend .col25 }
+		> .colRight { @extend .col75 }
+	}
+	
+	
+	&.cols75-25 { 
+		> .colLeft { @extend .col75 }
+		> .colRight { @extend .col25 }
+	}
+
+
+}
+
+@include phone {
+	.gridTwocol > .col { width: 100% !important; }
+}
+
+
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	cb Quick Google Map Fix
+└────────────────────────────────────┘ */
+.cbQuickGoogleMap img{max-width:none!important}
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	csc-mailform
+└────────────────────────────────────┘ */
+.csc-mailform input, .csc-mailform textarea { width: 200px; border: 1px solid silver; background: #fafafa; border-radius: 2px; margin-bottom: 5px; }
+.csc-mailform #mailformformtype_mail { margin-left: 100px; width: 200px; }
+.csc-form-element-textblock { width: 150px; }
+.csc-form-element-submit input { width: auto; }
+div.csc-mailform ol, div.csc-mailform ol li {padding-bottom: 10px!important; }
+
+
+
+
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	dce social links
+└────────────────────────────────────┘ */
+.mk7socials {
+	ul.inline li { display: inline-block; }
+	ul.stacked li { display: block; }
+	ul.alignCenter { text-align: center;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	csc-mailform
+└────────────────────────────────────┘ */
+.contenttable td { padding: 0px 10px 0px 0; }
+
+
+
+
+
+/*
+┌────────────────────────────────────┐
+	swiper
+└────────────────────────────────────┘ */
+
+span.swiper-button{position:absolute;width:50%;background:transparent; text-indent: -100px; overflow: hidden; top:22px;height:100%;}
+span.swiper-button-prev { left: 0; }
+span.swiper-button-next { right: 0; }
+
+
+
